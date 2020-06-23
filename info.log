@@ -1,1 +1,7 @@
 {"message":"Bookmark with id 842a90b1-5ab0-459f-ba13-df81648ff70c not found.","level":"error"}
+{"message":"Bookmark with id 70f0e5f0-b35c-429f-8da8-45f1d0271a8a created","level":"info"}
+{"message":"Title is required","level":"error"}
+{"message":"Url is required","level":"error"}
+{"message":"Description is required","level":"error"}
+{"message":"Rating is required","level":"error"}
+{"message":"Bookmark with id fd96ba93-5056-437d-a6d0-03d05d39956f created","level":"info"}
