@@ -5,3 +5,4 @@
 {"message":"Description is required","level":"error"}
 {"message":"Rating is required","level":"error"}
 {"message":"Bookmark with id fd96ba93-5056-437d-a6d0-03d05d39956f created","level":"info"}
+{"message":"List with id 4caf0a73-72f5-438b-9955-1f7e8fb23e21 deleted","level":"info"}

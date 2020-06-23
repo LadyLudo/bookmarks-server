@@ -17,7 +17,7 @@ const bookmarks = [
     },
     {
         id: uuidv4(),
-        title:'Title 2',
+        title:'Title 3',
         url: 'https://www.thinkful.com',
         description: 'Interesting content here',
         rating: 3
