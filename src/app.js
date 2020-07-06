@@ -3,11 +3,19 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
-const { NODE_ENV } = require('./config')
+const { NODE_ENV, DATABASE_URL } = require('./config')
 const logger = require('./logger')
 const bookmarksRouter = require('./bookmarks-router')
+const knex = require('knex')
 
 const app = express()
+
+const db = knex({
+  client: 'pg',
+  connection: DATABASE_URL,
+})
+
+app.set('db',db);
 
 const morganOption = (NODE_ENV === 'production')
   ? 'tiny'
@@ -19,6 +27,7 @@ app.use(cors())
 app.use(function validateBearerToken(req, res, next) {
   const apiToken = process.env.API_TOKEN
   const authToken = req.get('Authorization')
+
 
   if(!authToken || authToken.split(' ')[1] !== apiToken){
     logger.error(`Unauthorized request to path: ${req.path}`);
